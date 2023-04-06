@@ -1,0 +1,14 @@
+\edef \SavedTocDepth {\the \value {tocdepth}}
+\setcounter {tocdepth}{-10}
+\contentsline {chapter}{فهرست اشکال}{ج}{section*.1}% 
+\par عنوان\hfill صفحه \par 
+\setcounter {tocdepth}{\SavedTocDepth }
+\contentsline {chapter}{\numberline {1}فصل ‌جدید}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1-1}تصویر}{2}{section.1.1}% 
+\contentsline {chapter}{\numberline {2}سوالات شبیه‌سازی}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2-1}پاسخ سوال اول (\lr {Problem 9.4-1})}{4}{section.2.1}% 
+\contentsline {chapter}{منابع و مراجع}{5}{appendix*.2}% 
+\contentsline {chapter}{پیوست}{6}{appendix*.3}% 
+\contentsline {chapter}{واژه‌نامه‌ی فارسی به انگلیسی}{8}{appendix*.6}% 
+\contentsline {chapter}{واژه‌نامه‌ی انگلیسی به فارسی}{10}{appendix*.7}% 
+\contentsfinish 
