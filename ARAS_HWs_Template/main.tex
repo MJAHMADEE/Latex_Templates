@@ -1,0 +1,170 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=teal,
+    filecolor=magenta,      
+    urlcolor=teal,
+    citecolor = teal
+    }
+\usepackage{xcolor}
+\usepackage{xepersian}
+
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{IRLotus.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\includegraphics[width=2cm]{ARASLogo} پاسخ تمرین/تحقیق صفرم درس کنترل صنعتی}
+\lhead{\thepage}
+\rfoot{سیدمحمد حسینی}
+\lfoot{9901399}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\AtBeginDocument{
+	\def\chapterautorefname{فصل}%
+	\def\sectionautorefname{پاسخ سوال}%
+	\def\subsectionautorefname{بخش}%
+	\def\subsubsectionautorefname{بخش}%
+	\def\equationautorefname{رابطهٔ}%
+    \def\lstlistingautorefname{برنامۀ}%
+}
+\renewcommand{\lstlistingname}{Code}
+\begin{document}
+
+\input{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{عنوان سوال اول}\label{Section1}
+اگر سوال بخش‌بندی‌شده نباشد، پاسخ آن در این قسمت نوشته می‌شود.
+\subsection{عنوان بخش اول سوال اول}
+پاسخ بخش اول سوال در این قسمت نوشته می‌شود.
+\subsection{عنوان بخش دوم سوال اول}
+پاسخ بخش دوم سوال در این قسمت نوشته می‌شود.
+
+\section{عنوان سوال دوم}
+در این قسمت با نحوۀ نوشتن متون دارای کلمات انگلیسی آشنا می‌شوید:\\
+\indent % برای ایجاد تورفتگی در متن
+% کلمات انگلیسی داخل آکولادهای 
+% \lr{} 
+% نوشته می‌شوند.
+تکالیف درس کنترل صنعتی می‌تواند در قالب
+\lr{\LaTeX} (\lr{LaTeX})
+تحویل داده شوند.
+
+\section{عنوان سوال سوم}
+در این قسمت با نحوۀ درج روابط و فرمول‌ها آشنا می‌شوید:\\
+\indent % برای ایجاد تورفتگی در متن
+اگر می‌خواهید فرمول را درون متن بنویسید از قالبی مانند
+$E = m{c}^{2}$
+استفاده کنید (فرمول را بین دو علامت دلار قرار دهید).
+اگر می‌خواهید فرمول را به‌صورت مجزا نشان دهید به این صورت عمل کنید:
+\begin{equation}\label{eq1}
+E=M C^2
+\end{equation}
+برای پاورقی فارسی%
+\footnote{پاورقی فارسی}
+و برای پاورقی انگلیسی%
+\LTRfootnote{Footnote}
+به صورتی در فایل \verb|main.tex| آورده شده است عمل کنید.
+اگر هم خواستید به صفحۀ جدید بروید از این دستور استفاده کنید: \verb|\pagebreak|.
+\pagebreak
+\section{عنوان سوال چهارم}
+در این قسمت با نحوۀ درج اشکال آشنا می‌شوید:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.2\textwidth]{KNTULogo.pdf}
+    \caption{شکل شماره 1}
+    \label{fig1}
+\end{figure}
+
+\section{عنوان سوال پنجم}
+در این قسمت با نحوۀ درج جداول آشنا می‌شوید:
+\begin{table}[h!]
+    \centering
+    \caption{جدول شماره 1}
+    \label{tab1}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    خانه شماره 1 & خانه شماره 2 & خانه شماره 3\\
+    \hline
+    خانه شماره 4 & خانه شماره 5 & خانه شماره 6\\
+    \hline
+    خانه شماره 7 & خانه شماره 8 & خانه شماره 9\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\section{عنوان سوال ششم}
+در این قسمت با نحوۀ درج انواع لیست‌ها آشنا می‌شوید:
+\subsection{عنوان بخش اول سوال ششم}
+\begin{itemize}
+    \item [$\bullet$] مورد اول
+    \item [$\bullet$] مورد دوم
+\end{itemize}
+\subsection{عنوان بخش دوم سوال ششم}
+\begin{enumerate}
+    \item مورد شماره 1
+    \item مورد شماره 2
+\end{enumerate}
+
+\section{عنوان سوال هفتم}
+در این قسمت با نحوه درج برنامه‌ها آشنا می‌شوید:
+\lr{\lstinputlisting[language=MATLAB, caption={My Caption (Python)} \label{Code1}, showstringspaces=false, basicstyle=\ttfamily, backgroundcolor=\color{yellow!15!white}, breaklines=true]{Source.py}}
+\lr{\lstinputlisting[language=MATLAB, caption={My Caption (MATLAB)}, showstringspaces=false, basicstyle=\ttfamily, backgroundcolor=\color{yellow!15!white}, breaklines=true]{Source.m}}
+\lr{\lstinputlisting[language=C++, caption={My Caption (C++)}, showstringspaces=false, basicstyle=\ttfamily, backgroundcolor=\color{yellow!15!white}, breaklines=true]{Source.cpp}}
+\lr{\lstinputlisting[language=C, caption={My Caption (C)}, showstringspaces=false, basicstyle=\ttfamily, backgroundcolor=\color{yellow!15!white}, breaklines=true]{Source.c}}
+\section{عنوان سوال هشتم}
+در این قسمت با نحوۀ ارجاع‌دادن آشنا می‌شوید.
+\subsection{عنوان بخش اول سوال هشتم}
+در این قسمت با نحوۀ ارجاع به سایر منابع آشنا می‌شوید:\\
+\indent
+به صفحۀ درس کنترل صنعتی ارجاع داده می‌شود \cite{b1}. 
+به این کتاب‌ها ارجاع داده می‌شود \cite{b2}\cite{b3}.
+برای وارد کردن ارجاع می‌توانید از انتهای فایل 
+\verb|main.tex|
+استفاده کنید و یا با تغییر قالب مرجع‌نویسی،
+به فایل
+\verb|bibliography.bib|
+مراجعه کرده و فرمت
+\verb|.bib|
+را وارد کنید.
+\subsection{عنوان بخش دوم سوال هشتم}
+اگر می‌خواهید به یک شکل، جدول، یا بخش ارجاع دهید می‌توانید به دو صورتی که در ادامه آمده عمل کنید (حالت اول توصیه می‌شود):
+\begin{enumerate}
+    \item \textbf{مورد شماره 1:} \autoref{Section1}, \autoref{eq1}, \autoref{fig1}, \autoref{tab1}, \autoref{Code1}.
+    \item \textbf{مورد شماره 2:} \nameref{Section1}.
+\end{enumerate}
+\subsection{عنوان بخش سوم سوال هشتم}
+اگر می‌خواهید به یک پایگاه اینترنتی ارجاع دهید، می‌توانید از این دستور هم استفاده کنید:
+\href{https://github.com/MJAHMADEE/ARASLaTeXFormats}{گیتهاب (\lr{GitHub})}.
+
+\section{ضمیمه}
+برای آشنایی بیشتر با \lr{\LaTeX}، با جست‌و‌جو در اینترنت منابع مفیدی خواهید یافت.
+
+%\printbibliography[title=منابع]
+
+\section*{منابع}
+
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+\bibitem{b1} \href{https://aras.kntu.ac.ir/arascourses/industrial-control/}{صفحۀ درس کنترل صنعتی.}
+\begin{LTRitems}
+\resetlatinfont
+\bibitem{b2} Advanced PID Control, K.J. Astrom, and T. Hagglund, Third Edition, Inst. Soc. America, TJ 223.P55A85, 2006.
+\bibitem{b3} Control Engineering, A Modern Approach, P.R. Belanger, Saunders College Pub. 1995.
+\end{LTRitems}
+
+\end{thebibliography}
+
+\end{document}
